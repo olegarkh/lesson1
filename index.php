@@ -1,11 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Олег
- * Date: 17.02.15
- * Time: 10:30
- */
-echo "Всем привет! ddd <br>";
-echo "Привет Ворлд!";
 
-//phpinfo();
+require __DIR__. '/models/articles.php';
+
+$items = articles_getAll();
+
+include __DIR__.'/views/main.php';
