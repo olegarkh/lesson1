@@ -1,11 +1,11 @@
 <?php
 
 require_once __DIR__.'/../models/articles.php';
-$article = get_article($_GET['id']);
+$article = get_article($_GET['id']);              // получаем статью
 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html>                                   <!-- отображаем на экране -->
 <html>
 <head lang="en">
   <meta charset="UTF-8">
