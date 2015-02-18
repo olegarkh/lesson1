@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__.'/../models/articles.php';
-$article = get_article($_GET['id']);              // получаем статью по идентификатору
+$article = get_article($_GET['id']);              // получаем статью по идентификатору из бд
 
 ?>
 
