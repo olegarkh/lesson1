@@ -1,6 +1,5 @@
 <?php
 
-//require __DIR__.'/../functions/sql.php';
 require __DIR__.'/../models/sql.php';
 
 function articles_getAll(){
