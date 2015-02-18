@@ -10,7 +10,7 @@
 
 define('_CAT_','/images/');               //Каталог для хранения изображений
 
-function Extension($filename)             //Возвращаем расширение заданного файла
+function Extension($filename)             //Возвращаем расширение  заданного файла
 {
     return pathinfo($filename, PATHINFO_EXTENSION);
 }
