@@ -1,12 +1,34 @@
 <?php
 
+require __DIR__.'/../functions/sql.php';
+
 function articles_getAll(){
-    $arr = [
-             ['date'=>'12/05/2015','name'=>'Ветер на Канарах','content'=>'В мае на Канарах состоялись соревнования по виндсерфингу'],
-             ['date'=>'10/01/2015','name'=>'Гавайская волна','content'=>'В январе на остров Мауи пришел Джоус'],
-             ['date'=>'5/02/2015','name'=>'PWA рейтинг','content'=>'Опубликаован рейтинг лучших виндсерферов']
-            ];
+
+    sql_Connect();
+    $query = 'SELECT * FROM articles ORDER BY pub_date DESC';
+    $arr = sql_Query($query);
+    Disconnection();
+
     return $arr;
 }
 
+function get_article($id){
+   //sql_Connect();
+   Connection('news');
+   $query = "SELECT * FROM articles WHERE id = '$id' ";
+
+    return get_record($query);
+}
+
+function record_toDB($pub_date, $title, $preview, $article){
+    Connection('news');
+
+    $query = "INSERT INTO articles ( pub_date, title, preview, article ) VALUES('$pub_date', '$title', '$preview ', '$article')";
+    if ($res = mysql_query($query)){
+        Disconnection();
+        return true;
+    }
+    Disconnection();
+    return false;
+}
 ?>
