@@ -7,7 +7,7 @@ function sql_Connect(){
 
 function Connection($table){
     if (mysql_connect('localhost','root','')) {
-        if ($res = mysql_select_db($table)) {   // зачем res?
+        if ($res = mysql_select_db($table)) {   // зачем res? //
         }
         else{
             die("Соединение c БД не установлено! <br>");
