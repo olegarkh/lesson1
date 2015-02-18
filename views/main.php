@@ -1,10 +1,3 @@
-<?php
-//include __DIR__.'/../models/articles.php';
-
-//$items = articles_getAll();
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head lang="en">
