@@ -12,7 +12,7 @@
     <title>Список статей</title>
 </head>
 <body>
-  <a href="load.php">Добавить статью</a>
+  <a href="views/load.php">Добавить статью</a>
   <?php foreach ($items as $item):?>
       <h3><?php echo $item['title'];?></h3>
       <p><?php echo $item['pub_date'];?></p>
