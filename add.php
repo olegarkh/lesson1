@@ -9,7 +9,6 @@ $article = $_POST['article'];
 
 $res = record_toDB($pub_date, $title, $preview, $article);
 
-
 if ($res){
     header('Location: index.php');
 }
